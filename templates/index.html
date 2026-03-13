@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>퇴사/퇴근 계산기</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🏃‍♂️ 자유 계산기</h1>
+      <form action="/countdown" method="get">
+        <label>목표 날짜 (YYYY-MM-DD)</label>
+        <input type="date" name="date" required />
+        <label>목표 시간 (HH:MM)</label>
+        <input type="time" name="time" required />
+        <label>내 시급 (원)</label>
+        <input
+          type="number"
+          name="wage"
+          value="9860"
+          placeholder="2024년 최저시급 9860"
+        />
+        <button type="submit">남은 시간 확인하기</button>
+      </form>
+    </div>
+  </body>
+</html>

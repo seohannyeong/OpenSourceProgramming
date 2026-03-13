@@ -1,26 +1,49 @@
-# My Development Journal API
+# 오늘의 퇴근/퇴사 계산기
 
-이 프로젝트는 Flask를 사용하여 구축된 간단한 개발 일지 API입니다.
+사용자가 입력한 목표 시간까지 남은 시간을 계산하고 실시간으로 카운트다운을 보여주는 웹 애플리케이션입니다.
 
-## 사전 요구 사항 (Prerequisites)
+남은 시간을 기반으로 커피, 치킨, 돈 등 재미있는 지표로 변환하여 사용자에게 제공합니다.
 
-- Python 3.x
-- Flask
+## 주요 기능
 
-## 설치 방법 (Installation)
+1. 목표 날짜 및 시간 설정
+2. 실시간 카운트다운
+3. 남은 시간을 재미있는 값으로 변환
 
-1. 필요한 패키지를 설치합니다.
+## 실행 방법
+
+Flask 설치
 
 ```bash
 pip install flask
 ```
 
-## 실행 방법 (Usage)
-
-다음 명령어로 애플리케이션을 실행합니다.
+프로그램 실행
 
 ```bash
-python my_profile.py
+python app.py
 ```
 
-서버가 실행되면 브라우저에서 `http://localhost:5000`으로 접속하여 확인할 수 있습니다.
+브라우저에서 접속
+
+```
+http://127.0.0.1:5000
+```
+
+## 프로젝트 구조
+
+```
+project
+│
+├─ app.py
+├─ Requirements.md
+├─ README.md
+│
+├─ templates
+│  ├─ index.html
+│  ├─ countdown.html
+│  └─ convert.html
+│
+└─ static
+   └─ style.css
+```
