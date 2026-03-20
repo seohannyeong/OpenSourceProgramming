@@ -3,6 +3,16 @@ from datetime import datetime
 
 app = Flask(__name__)
 
+def get_diff_seconds(target_dt, now):
+    diff_seconds = (target_dt - now).total_seconds()
+    return max(0, diff_seconds)
+
+def get_conversion_stats(diff_seconds, wage):
+    earned = int((diff_seconds / 3600) * wage)
+    chickens = earned // 20000
+    coffees = earned // 4500
+    return earned, chickens, coffees
+
 @app.route("/")
 def index():
     # 1. 목표 설정 페이지
@@ -32,12 +42,8 @@ def stats():
     target_dt = datetime.strptime(f"{target_date} {target_time}", "%Y-%m-%d %H:%M")
     now = datetime.now()
     
-    diff_seconds = (target_dt - now).total_seconds()
-    if diff_seconds < 0: diff_seconds = 0
-    
-    earned = int((diff_seconds / 3600) * wage)
-    chickens = earned // 20000
-    coffees = earned // 4500
+    diff_seconds = get_diff_seconds(target_dt, now)
+    earned, chickens, coffees = get_conversion_stats(diff_seconds, wage)
     
     return render_template('stats.html',
                            target_date=target_date,
