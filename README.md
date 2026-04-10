@@ -8,9 +8,8 @@
 > 사용자가 설정한 목표 시간까지 남은 시간을 계산하고, 이를 돈, 치킨, 커피 등 재미있고 직관적인 지표로 변환해 주는 위트 있는 카운트다운 웹 애플리케이션입니다.
 
 ## 📸 스크린샷 및 시연 (Demo)
-<img width="782" height="787" alt="image" src="https://github.com/user-attachments/assets/e8ab54c5-1f23-4578-ae27-f0a8d2fa3d16" />
-<img width="865" height="689" alt="image" src="https://github.com/user-attachments/assets/bcb919cb-1885-493d-a23c-8306e42ef5a9" />
-<img width="830" height="879" alt="image" src="https://github.com/user-attachments/assets/799c83f9-19f8-4dc8-9e75-bf57a9ac6b94" />
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/e8ab54c5-1f23-4578-ae27-f0a8d2fa3d16" /> <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/bcb919cb-1885-493d-a23c-8306e42ef5a9" />
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/799c83f9-19f8-4dc8-9e75-bf57a9ac6b94" />
 
 
 
