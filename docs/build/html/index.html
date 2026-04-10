@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>let’s quit documentation &#8212; let&#39;s quit Project Release — v1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=a49c463d"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="let-s-quit-documentation">
+<h1>let’s quit documentation<a class="headerlink" href="#let-s-quit-documentation" title="Link to this heading">¶</a></h1>
+<p>Add your content using <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> syntax. See the
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a>
+documentation for details.</p>
+<div class="toctree-wrapper compound">
+</div>
+<dl class="py class" id="module-app.my_profile">
+<dt class="sig sig-object py" id="app.my_profile.TargetDateTime">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">app.my_profile.</span></span><span class="sig-name descname"><span class="pre">TargetDateTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.my_profile.TargetDateTime" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that manages and converts target date and time into a datetime object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.my_profile.calculate_stats">
+<span class="sig-prename descclassname"><span class="pre">app.my_profile.</span></span><span class="sig-name descname"><span class="pre">calculate_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wage</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.my_profile.calculate_stats" title="Link to this definition">¶</a></dt>
+<dd><p>Calculates the remaining time until the target time and returns the converted stats.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.my_profile.countdown">
+<span class="sig-prename descclassname"><span class="pre">app.my_profile.</span></span><span class="sig-name descname"><span class="pre">countdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.my_profile.countdown" title="Link to this definition">¶</a></dt>
+<dd><p>Real-time countdown page
+—
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: date
+in: query
+type: string
+required: true</p></li>
+<li><p>name: time
+in: query
+type: string
+required: true</p></li>
+<li><p>name: wage
+in: query
+type: integer
+required: false
+default: 9860</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>responses:</dt><dd><dl class="simple">
+<dt>200:</dt><dd><p>description: Renders the real-time countdown page.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.my_profile.get_conversion_stats">
+<span class="sig-prename descclassname"><span class="pre">app.my_profile.</span></span><span class="sig-name descname"><span class="pre">get_conversion_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diff_seconds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wage</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.my_profile.get_conversion_stats" title="Link to this definition">¶</a></dt>
+<dd><p>Calculates the expected earnings, and the number of chickens and coffees that can be purchased based on the remaining time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>diff_seconds</strong> – Remaining time (seconds)</p></li>
+<li><p><strong>wage</strong> – Hourly wage to apply (KRW)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Expected earnings, number of chickens, number of coffees (tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.my_profile.get_diff_seconds">
+<span class="sig-prename descclassname"><span class="pre">app.my_profile.</span></span><span class="sig-name descname"><span class="pre">get_diff_seconds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">now</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#app.my_profile.get_diff_seconds" title="Link to this definition">¶</a></dt>
+<dd><p>Calculates the difference between the target time and current time in seconds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_dt</strong> – Target date and time (datetime object)</p></li>
+<li><p><strong>now</strong> – Current date and time (datetime object)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Remaining time (in seconds, 0 if in the past)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.my_profile.get_request_params">
+<span class="sig-prename descclassname"><span class="pre">app.my_profile.</span></span><span class="sig-name descname"><span class="pre">get_request_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.my_profile.get_request_params" title="Link to this definition">¶</a></dt>
+<dd><p>Extracts target date, time, and wage from the request’s query parameters.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.my_profile.index">
+<span class="sig-prename descclassname"><span class="pre">app.my_profile.</span></span><span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.my_profile.index" title="Link to this definition">¶</a></dt>
+<dd><p>Main page (Target setting)
+—
+responses:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>200:</dt><dd><p>description: Renders a form where users can input the target date and time.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.my_profile.stats">
+<span class="sig-prename descclassname"><span class="pre">app.my_profile.</span></span><span class="sig-name descname"><span class="pre">stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.my_profile.stats" title="Link to this definition">¶</a></dt>
+<dd><p>Witty conversion stats page
+—
+parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>name: date
+in: query
+type: string
+required: true</p></li>
+<li><p>name: time
+in: query
+type: string
+required: true</p></li>
+<li><p>name: wage
+in: query
+type: integer
+required: false</p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>responses:</dt><dd><dl class="simple">
+<dt>200:</dt><dd><p>description: Renders a page showing expected earnings, and the number of chickens and coffees.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">let's quit</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, seohannyeong.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
