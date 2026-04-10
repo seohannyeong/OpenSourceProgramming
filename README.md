@@ -39,7 +39,7 @@
 **1. 저장소 클론 및 폴더 이동**
 
 ```bash
-git clone https://github.com/본인계정/opensourceprogramming.git
+git clone https://github.com/seohannyeong/opensourceprogramming.git
 cd opensourceprogramming
 ```
 
@@ -62,8 +62,7 @@ python -m app.my_profile
 
 ## 📚 공식 문서 (Documentation)
 
-- **Sphinx 기술 문서**: [여기에 배포된 GitHub Pages 주소 입력]
-- **Sphinx 기술 문서**: [https://본인의_GitHub_아이디.github.io/opensourceprogramming/](https://본인의_GitHub_아이디.github.io/opensourceprogramming/)
+- **Sphinx 기술 문서**: https://seohannyeong.github.io/OpenSourceProgramming/
 
 ## 🧠 배운 점 및 트러블슈팅 (Lessons Learned)
 
