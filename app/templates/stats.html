@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>가치 환산</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>💰 존버의 가치</h1>
+      <div class="stat-box">
+        <p>남은 시간 일하면</p>
+        <div class="money">{{ earned }} 원</div>
+        <p>을 벌 수 있습니다.</p>
+      </div>
+      <div class="stat-box">
+        <h3>🍗 치킨 {{ chickens }}마리</h3>
+        <h3>☕ 커피 {{ coffees }}잔</h3>
+        <p style="font-size: 0.8em; color: gray">
+          (치킨 2만원, 커피 4500원 기준)
+        </p>
+      </div>
+      <a
+        href="/countdown?date={{ target_date }}&time={{ target_time }}&wage={{ wage }}"
+      >
+        <button>🔙 시계 보기</button>
+      </a>
+    </div>
+  </body>
+</html>
